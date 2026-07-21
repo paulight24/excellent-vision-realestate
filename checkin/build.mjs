@@ -206,8 +206,17 @@ function renderContent(d) {
         ${co.note ? `<p class="depart-note">${esc(co.note)}</p>` : ''}
       </section>
 
+      ${d.areaGuideUrl ? `
+      <section class="block area-guide-block">
+        <span class="block-eyebrow">Explore</span>
+        <h2>Discover the area</h2>
+        <p>Looking for places to eat, things to do, or nearby essentials? Check out our curated local guide.</p>
+        <a class="area-guide-btn area-guide-primary" href="${esc(d.areaGuideUrl)}" target="_blank" rel="noopener">🗺️ Open the Ridgecrest Area Guide →</a>
+      </section>` : ''}
+
       <footer class="ck-foot">
         ${d.manualUrl ? `<a class="area-guide-btn" href="${esc(d.manualUrl)}" target="_blank" rel="noopener">📖 Download the full welcome manual →</a>` : ''}
+        ${d.areaGuideUrl ? `<a class="area-guide-btn" href="${esc(d.areaGuideUrl)}" target="_blank" rel="noopener">🗺️ Ridgecrest Area Guide →</a>` : ''}
         <p class="ck-closing">${esc(d.closing)}</p>
         <p class="ck-sign">— The ${esc(d.brand)}</p>
       </footer>
@@ -394,9 +403,13 @@ function shell(payload, d) {
     background:var(--blue);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
     background-size:14px;background-repeat:no-repeat;background-position:center}
 
+  .area-guide-block{text-align:center;background:var(--blue-lt);border-color:var(--blue)}
+  .area-guide-block p{max-width:480px;margin:0 auto 20px}
   .area-guide-btn{display:inline-block;margin-bottom:22px;padding:14px 26px;border:2px solid var(--blue);border-radius:2px;
     color:var(--blue);text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;transition:.2s;background:var(--white);font-family:var(--sans)}
   .area-guide-btn:hover{background:var(--blue);color:#fff}
+  a.area-guide-primary{background:var(--blue);color:#fff;font-size:.95rem;padding:16px 32px}
+  a.area-guide-primary:hover{background:var(--blue-dk);color:#fff}
   .ck-foot{text-align:center;padding:44px 20px 8px}
   .ck-closing{font-family:var(--serif);font-size:1.5rem;color:var(--ink)}
   .ck-sign{color:var(--blue);font-weight:600;margin-top:6px;font-family:var(--sans)}
