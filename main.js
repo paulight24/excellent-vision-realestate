@@ -11,62 +11,63 @@
 class ListingService {
     constructor() {
         this.listings = [
-            {
-                id: 'newport-a',
-                badge: 'Available Jun 16',
-                location: 'Newport Beach, CA',
-                title: 'Luxurious Stay — 10 min from Airport & Beach',
-                price: 3495,
-                priceUnit: 'month',
-                beds: '1 Bedroom · Queen Bed',
-                baths: '1 Private Bath',
-                utilitiesIncluded: true,
-                minStay: 30,
-                cleaningFee: 150,
-                description: 'Elegant apartment with direct terrace access and garden views in Newport Beach. ' +
-                    'Fully equipped kitchen, flat-screen TV, queen-sized bed plus futon, and air conditioning. ' +
-                    'Access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
-                    'Located just 10 minutes from John Wayne Airport and 1.1 miles from North Star Beach. ' +
-                    'Walking distance to top restaurants and shopping.',
-                amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
-                furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
-                photos: [
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Living area' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132654-full.jpg', alt: 'Bedroom' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132664-full.jpg', alt: 'Kitchen' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132666-full.jpg', alt: 'Bathroom' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132668-full.jpg', alt: 'Terrace' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132669-full.jpg', alt: 'Pool area' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132670-full.jpg', alt: 'View' },
-                ],
-            },
-            {
-                id: 'newport-b',
-                badge: 'Available Now',
-                location: 'Newport Beach, CA',
-                title: 'Luxurious Stay — 10 min from Airport & Beach',
-                price: 3495,
-                priceUnit: 'month',
-                beds: '1 Bedroom · Queen Bed',
-                baths: '1 Private Bath',
-                utilitiesIncluded: true,
-                minStay: 30,
-                cleaningFee: 150,
-                description: 'Sister unit to Unit A — same building, same premium amenities. ' +
-                    'Direct terrace access and garden views, fully equipped kitchen, flat-screen TV, and air conditioning. ' +
-                    'Shared access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
-                    '10 minutes from John Wayne Airport, 1.1 miles from North Star Beach.',
-                amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
-                furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
-                photos: [
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132671-full.jpg', alt: 'Living area' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132674-full.jpg', alt: 'Bedroom' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132675-full.jpg', alt: 'Kitchen' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132676-full.jpg', alt: 'Bathroom' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132678-full.jpg', alt: 'Pool' },
-                    { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Exterior' },
-                ],
-            },
+            // Newport Beach listings hidden (uncomment to restore)
+            // {
+            //     id: 'newport-a',
+            //     badge: 'Available Jun 16',
+            //     location: 'Newport Beach, CA',
+            //     title: 'Luxurious Stay — 10 min from Airport & Beach',
+            //     price: 3495,
+            //     priceUnit: 'month',
+            //     beds: '1 Bedroom · Queen Bed',
+            //     baths: '1 Private Bath',
+            //     utilitiesIncluded: true,
+            //     minStay: 30,
+            //     cleaningFee: 150,
+            //     description: 'Elegant apartment with direct terrace access and garden views in Newport Beach. ' +
+            //         'Fully equipped kitchen, flat-screen TV, queen-sized bed plus futon, and air conditioning. ' +
+            //         'Access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
+            //         'Located just 10 minutes from John Wayne Airport and 1.1 miles from North Star Beach. ' +
+            //         'Walking distance to top restaurants and shopping.',
+            //     amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
+            //     furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
+            //     photos: [
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Living area' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132654-full.jpg', alt: 'Bedroom' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132664-full.jpg', alt: 'Kitchen' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132666-full.jpg', alt: 'Bathroom' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132668-full.jpg', alt: 'Terrace' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132669-full.jpg', alt: 'Pool area' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132670-full.jpg', alt: 'View' },
+            //     ],
+            // },
+            // {
+            //     id: 'newport-b',
+            //     badge: 'Available Now',
+            //     location: 'Newport Beach, CA',
+            //     title: 'Luxurious Stay — 10 min from Airport & Beach',
+            //     price: 3495,
+            //     priceUnit: 'month',
+            //     beds: '1 Bedroom · Queen Bed',
+            //     baths: '1 Private Bath',
+            //     utilitiesIncluded: true,
+            //     minStay: 30,
+            //     cleaningFee: 150,
+            //     description: 'Sister unit to Unit A — same building, same premium amenities. ' +
+            //         'Direct terrace access and garden views, fully equipped kitchen, flat-screen TV, and air conditioning. ' +
+            //         'Shared access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
+            //         '10 minutes from John Wayne Airport, 1.1 miles from North Star Beach.',
+            //     amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
+            //     furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
+            //     photos: [
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132671-full.jpg', alt: 'Living area' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132674-full.jpg', alt: 'Bedroom' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132675-full.jpg', alt: 'Kitchen' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132676-full.jpg', alt: 'Bathroom' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132678-full.jpg', alt: 'Pool' },
+            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Exterior' },
+            //     ],
+            // },
             {
                 id: 'ridgecrest',
                 badge: 'Available Now',
