@@ -176,6 +176,38 @@
           "@type": "Answer",
           "text": "Yes. Our Ridgecrest home has 4 bedrooms and sleeps up to 8 guests, making it ideal for family vacations, group retreats, or friends traveling together. The house is fully furnished with a full kitchen, washer/dryer, and all utilities included."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Where should I stay when visiting Red Rock Canyon State Park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our fully furnished 4-bedroom vacation rental in Ridgecrest is just a 25-minute drive from Red Rock Canyon State Park. It's the closest comfortable home rental to the park — with a full kitchen, A/C, washer/dryer, and space for up to 8 guests. Much more comfortable than camping, and all utilities are included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where to stay near Death Valley National Park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ridgecrest, California is one of the best base camps for exploring Death Valley — about 1.5 hours from the park's western entrances. Our furnished vacation rental in Ridgecrest sleeps 8, includes all utilities, and gives you a comfortable home to return to after a day in the desert. Grocery stores, restaurants, and gas stations are all nearby."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I see the Coso petroglyphs near Ridgecrest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Coso petroglyphs are accessible through guided tours organized by the Maturango Museum in Ridgecrest (100 E Las Flores Ave). Tours run seasonally — typically spring and fall. Our vacation rental is just 5 minutes from the museum, making it the perfect home base for your petroglyph excursion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Ridgecrest good for stargazing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ridgecrest is one of the best stargazing locations in California. Located in the High Mojave Desert far from major city lights, you can see the Milky Way with your naked eye. Our vacation rental's quiet neighborhood offers excellent backyard stargazing — no driving required."
+        }
       }
     ]
   }
@@ -212,6 +244,64 @@
     "petsAllowed": false,
     "checkinTime": "15:00",
     "checkoutTime": "10:00"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Attractions Near Our Ridgecrest Vacation Rental",
+    "description": "Top things to do near our furnished vacation rental in Ridgecrest, California",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "TouristAttraction",
+          "name": "Red Rock Canyon State Park",
+          "description": "Dramatic red sandstone cliffs, Joshua trees, and wildflower blooms just 25 minutes from our Ridgecrest vacation rental. A filming location for dozens of Hollywood movies.",
+          "address": {"@type": "PostalAddress", "addressLocality": "Cantil", "addressRegion": "CA", "addressCountry": "US"},
+          "geo": {"@type": "GeoCoordinates", "latitude": 35.3747, "longitude": -117.9870},
+          "touristType": ["hiking", "photography", "nature", "families"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "TouristAttraction",
+          "name": "Death Valley National Park",
+          "description": "The hottest, driest, and lowest national park in North America. Mesquite Flat Sand Dunes, Badwater Basin, and Artists Palette — all an easy day trip from our Ridgecrest rental.",
+          "address": {"@type": "PostalAddress", "addressRegion": "CA", "addressCountry": "US"},
+          "geo": {"@type": "GeoCoordinates", "latitude": 36.5323, "longitude": -116.9325},
+          "touristType": ["hiking", "photography", "geology", "stargazing"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "TouristAttraction",
+          "name": "Maturango Museum & Coso Petroglyphs",
+          "description": "One of the largest concentrations of petroglyphs in North America. Guided tours to the Coso Range rock art depart from the Maturango Museum in Ridgecrest, just 5 minutes from our rental.",
+          "address": {"@type": "PostalAddress", "streetAddress": "100 E Las Flores Ave", "addressLocality": "Ridgecrest", "addressRegion": "CA", "postalCode": "93555", "addressCountry": "US"},
+          "geo": {"@type": "GeoCoordinates", "latitude": 35.6313, "longitude": -117.6674},
+          "touristType": ["history", "archaeology", "culture", "families"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "TouristAttraction",
+          "name": "Mojave Desert Dark Sky Stargazing",
+          "description": "Ridgecrest's remote High Desert location delivers some of California's darkest skies — see the Milky Way with the naked eye right from the backyard of our vacation rental.",
+          "address": {"@type": "PostalAddress", "addressLocality": "Ridgecrest", "addressRegion": "CA", "addressCountry": "US"},
+          "touristType": ["stargazing", "astronomy", "photography", "nature"]
+        }
+      }
+    ]
   }
   </script>
 
@@ -402,6 +492,8 @@
     .attraction-body h3 { font-size: 1rem; margin-bottom: 6px; color: var(--text); }
     .attraction-body .attraction-dist { font-size: 0.7rem; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; font-family: Arial, sans-serif; margin-bottom: 8px; }
     .attraction-body p { font-size: 0.84rem; color: var(--gray); font-family: Arial, sans-serif; line-height: 1.6; }
+    .attraction-body .attraction-cta { display: inline-block; margin-top: 10px; font-size: 0.78rem; color: var(--blue); font-family: Arial, sans-serif; font-weight: 600; text-decoration: none; letter-spacing: 0.3px; }
+    .attraction-body .attraction-cta:hover { text-decoration: underline; }
     .discover-cta { text-align: center; margin-top: 16px; }
     .discover-cta p { font-family: Arial, sans-serif; font-size: 0.92rem; color: var(--gray); margin-bottom: 16px; }
 
@@ -618,7 +710,8 @@
       <div class="attraction-body">
         <h3>Red Rock Canyon State Park</h3>
         <div class="attraction-dist">25 min drive</div>
-        <p>Dramatic red cliffs, Joshua trees, and desert wildflowers. A filming location for countless movies — hike the trails at sunrise for unforgettable views.</p>
+        <p>Dramatic red cliffs, Joshua trees, and desert wildflowers make Red Rock Canyon a must-visit California state park. A popular filming location and hiking destination — just 25 minutes from our vacation rental. Perfect for sunrise hikes, family day trips, and landscape photography.</p>
+        <a href="#contact" class="attraction-cta">Book your stay nearby &rarr;</a>
       </div>
     </div>
     <div class="attraction">
@@ -626,23 +719,26 @@
       <div class="attraction-body">
         <h3>Death Valley National Park</h3>
         <div class="attraction-dist">1.5 hr day trip</div>
-        <p>The hottest place on Earth and a world of extremes — salt flats, sand dunes, colorful canyons, and some of the darkest night skies in America.</p>
+        <p>The hottest place on Earth and a bucket-list national park — salt flats at Badwater Basin, Mesquite Flat sand dunes, and Artist's Palette. Ridgecrest is one of the closest comfortable towns with lodging near Death Valley, making our rental your ideal base camp.</p>
+        <a href="#contact" class="attraction-cta">Book your stay nearby &rarr;</a>
       </div>
     </div>
     <div class="attraction">
       <div class="attraction-img" style="background-image:url('https://images.unsplash.com/photo-1755553316630-0bdd6f3b86d8?w=600&h=360&fit=crop&q=80');"></div>
       <div class="attraction-body">
-        <h3>Petroglyph Canyon & Museum</h3>
+        <h3>Coso Petroglyphs &amp; Maturango Museum</h3>
         <div class="attraction-dist">5 min drive</div>
-        <p>Explore ancient Native American rock art at the Maturango Museum. The Coso petroglyphs are among the largest concentrations in North America.</p>
+        <p>Discover one of the largest concentrations of ancient Native American rock art in North America. The Maturango Museum offers guided petroglyph tours seasonally — our vacation rental is just minutes away, the closest comfortable lodging for your visit.</p>
+        <a href="#contact" class="attraction-cta">Book your stay nearby &rarr;</a>
       </div>
     </div>
     <div class="attraction">
       <div class="attraction-img" style="background-image:url('https://images.unsplash.com/photo-1536873602512-8e88cc8398b1?w=600&h=360&fit=crop&q=80');"></div>
       <div class="attraction-body">
-        <h3>Desert Stargazing</h3>
+        <h3>Mojave Desert Stargazing</h3>
         <div class="attraction-dist">Step outside</div>
-        <p>Far from city lights, Ridgecrest offers pristine dark skies. See the Milky Way with your naked eye — perfect for photography and quiet evenings.</p>
+        <p>Ridgecrest is a top California dark sky destination — see the Milky Way with your naked eye from our backyard. Perfect for astrophotography, family stargazing nights, and romantic desert evenings far from city light pollution.</p>
+        <a href="#contact" class="attraction-cta">Book your stay nearby &rarr;</a>
       </div>
     </div>
   </div>
