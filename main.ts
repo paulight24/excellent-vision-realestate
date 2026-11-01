@@ -39,6 +39,7 @@ interface BookingFormData {
   phone: string;
   listingId: string;
   moveInDate: string;
+  moveOutDate: string;
   message: string;
 }
 
@@ -119,7 +120,7 @@ class ListingService {
       cleaningFee: 250,
       deposit: 1000,
       description:
-        'Spacious 4-bedroom, 2-bathroom house perfect for families, remote workers, or adventure seekers. ' +
+        'Spacious 4-bedroom, 2-bathroom vacation home perfect for families, group retreats, remote workers, or adventure seekers. ' +
         'Master bedroom features a king bed; three additional rooms with queen beds. Sleeps up to 8 guests. ' +
         'Minutes from Red Rock Canyon State Park and a scenic drive to Death Valley National Park. ' +
         'Discover the Maturango Museum, China Lake, and stunning desert landscapes. ' +
@@ -275,6 +276,13 @@ class ModalComponent {
           <a href="${listing.furnishedFinderUrl}" target="_blank" class="btn-ff">
             Also view on Furnished Finder ↗
           </a>
+          ${listing.id === 'ridgecrest' ? `
+          <div class="video-tour-section">
+            <h3 class="video-tour-title">🎬 Video Tour</h3>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/hD3P3xbtRxw" title="624 Randall St Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>` : ''}
         </div>
 
         <!-- Booking Form -->
@@ -285,8 +293,16 @@ class ModalComponent {
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="email" name="email" placeholder="Email Address" required />
             <input type="tel" name="phone" placeholder="Phone Number" />
-            <label class="field-label">Desired Move-In Date</label>
-            <input type="date" name="moveInDate" required />
+            <div class="date-row">
+              <div class="date-field">
+                <label class="field-label">Desired Move-In Date</label>
+                <input type="date" name="moveInDate" required />
+              </div>
+              <div class="date-field">
+                <label class="field-label">Desired Move-Out Date</label>
+                <input type="date" name="moveOutDate" />
+              </div>
+            </div>
             <textarea name="message" placeholder="Questions or anything we should know…" rows="4"></textarea>
             <button type="submit" class="btn-submit">
               <span class="btn-text">Send Booking Request</span>
@@ -400,6 +416,7 @@ class BookingServiceExtended extends BookingService {
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
       listingId,
       moveInDate: (form.elements.namedItem('moveInDate') as HTMLInputElement).value,
+      moveOutDate: (form.elements.namedItem('moveOutDate') as HTMLInputElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
     };
 

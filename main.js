@@ -1,4 +1,3 @@
-"use strict";
 // ============================================================
 // Excellent Vision Real Estate — main.ts
 // Structured for easy migration to Angular:
@@ -11,62 +10,64 @@
 class ListingService {
     constructor() {
         this.listings = [
-            // Newport Beach listings hidden (uncomment to restore)
+            // ── Newport Beach listings hidden (uncomment to restore) ──
             // {
-            //     id: 'newport-a',
-            //     badge: 'Available Jun 16',
-            //     location: 'Newport Beach, CA',
-            //     title: 'Luxurious Stay — 10 min from Airport & Beach',
-            //     price: 3495,
-            //     priceUnit: 'month',
-            //     beds: '1 Bedroom · Queen Bed',
-            //     baths: '1 Private Bath',
-            //     utilitiesIncluded: true,
-            //     minStay: 30,
-            //     cleaningFee: 150,
-            //     description: 'Elegant apartment with direct terrace access and garden views in Newport Beach. ' +
-            //         'Fully equipped kitchen, flat-screen TV, queen-sized bed plus futon, and air conditioning. ' +
-            //         'Access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
-            //         'Located just 10 minutes from John Wayne Airport and 1.1 miles from North Star Beach. ' +
-            //         'Walking distance to top restaurants and shopping.',
-            //     amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
-            //     furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
-            //     photos: [
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Living area' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132654-full.jpg', alt: 'Bedroom' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132664-full.jpg', alt: 'Kitchen' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132666-full.jpg', alt: 'Bathroom' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132668-full.jpg', alt: 'Terrace' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132669-full.jpg', alt: 'Pool area' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132670-full.jpg', alt: 'View' },
-            //     ],
+            //   id: 'newport-a',
+            //   badge: 'Available Jun 16',
+            //   location: 'Newport Beach, CA',
+            //   title: 'Luxurious Stay — 10 min from Airport & Beach',
+            //   price: 3495,
+            //   priceUnit: 'month',
+            //   beds: '1 Bedroom · Queen Bed',
+            //   baths: '1 Private Bath',
+            //   utilitiesIncluded: true,
+            //   minStay: 30,
+            //   cleaningFee: 150,
+            //   description:
+            //     'Elegant apartment with direct terrace access and garden views in Newport Beach. ' +
+            //     'Fully equipped kitchen, flat-screen TV, queen-sized bed plus futon, and air conditioning. ' +
+            //     'Access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
+            //     'Located just 10 minutes from John Wayne Airport and 1.1 miles from North Star Beach. ' +
+            //     'Walking distance to top restaurants and shopping.',
+            //   amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
+            //   furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
+            //   photos: [
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Living area' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132654-full.jpg', alt: 'Bedroom' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132664-full.jpg', alt: 'Kitchen' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132666-full.jpg', alt: 'Bathroom' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132668-full.jpg', alt: 'Terrace' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132669-full.jpg', alt: 'Pool area' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132670-full.jpg', alt: 'View' },
+            //   ],
             // },
             // {
-            //     id: 'newport-b',
-            //     badge: 'Available Now',
-            //     location: 'Newport Beach, CA',
-            //     title: 'Luxurious Stay — 10 min from Airport & Beach',
-            //     price: 3495,
-            //     priceUnit: 'month',
-            //     beds: '1 Bedroom · Queen Bed',
-            //     baths: '1 Private Bath',
-            //     utilitiesIncluded: true,
-            //     minStay: 30,
-            //     cleaningFee: 150,
-            //     description: 'Sister unit to Unit A — same building, same premium amenities. ' +
-            //         'Direct terrace access and garden views, fully equipped kitchen, flat-screen TV, and air conditioning. ' +
-            //         'Shared access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
-            //         '10 minutes from John Wayne Airport, 1.1 miles from North Star Beach.',
-            //     amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
-            //     furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
-            //     photos: [
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132671-full.jpg', alt: 'Living area' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132674-full.jpg', alt: 'Bedroom' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132675-full.jpg', alt: 'Kitchen' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132676-full.jpg', alt: 'Bathroom' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132678-full.jpg', alt: 'Pool' },
-            //         { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Exterior' },
-            //     ],
+            //   id: 'newport-b',
+            //   badge: 'Available Now',
+            //   location: 'Newport Beach, CA',
+            //   title: 'Luxurious Stay — 10 min from Airport & Beach',
+            //   price: 3495,
+            //   priceUnit: 'month',
+            //   beds: '1 Bedroom · Queen Bed',
+            //   baths: '1 Private Bath',
+            //   utilitiesIncluded: true,
+            //   minStay: 30,
+            //   cleaningFee: 150,
+            //   description:
+            //     'Sister unit to Unit A — same building, same premium amenities. ' +
+            //     'Direct terrace access and garden views, fully equipped kitchen, flat-screen TV, and air conditioning. ' +
+            //     'Shared access to private pool, hot tub, basketball/tennis court, and free private parking. ' +
+            //     '10 minutes from John Wayne Airport, 1.1 miles from North Star Beach.',
+            //   amenities: ['🏊 Private Pool', '♨️ Hot Tub', '📶 Free WiFi', '🚗 Free Parking', '🌿 Garden View', '❄️ A/C', '🏸 Tennis Court', '🛗 Elevator', '🧺 Washer/Dryer'],
+            //   furnishedFinderUrl: 'https://www.furnishedfinder.com/property/522051_1',
+            //   photos: [
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132671-full.jpg', alt: 'Living area' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132674-full.jpg', alt: 'Bedroom' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132675-full.jpg', alt: 'Kitchen' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132676-full.jpg', alt: 'Bathroom' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132678-full.jpg', alt: 'Pool' },
+            //     { url: 'https://www.furnishedfinder.com/_pdp_/522051/1/522051_1_46132677-full.jpg', alt: 'Exterior' },
+            //   ],
             // },
             {
                 id: 'ridgecrest',
@@ -81,7 +82,7 @@ class ListingService {
                 minStay: 30,
                 cleaningFee: 250,
                 deposit: 1000,
-                description: 'Spacious 4-bedroom, 2-bathroom house perfect for families, remote workers, or adventure seekers. ' +
+                description: 'Spacious 4-bedroom, 2-bathroom vacation home perfect for families, group retreats, remote workers, or adventure seekers. ' +
                     'Master bedroom features a king bed; three additional rooms with queen beds. Sleeps up to 8 guests. ' +
                     'Minutes from Red Rock Canyon State Park and a scenic drive to Death Valley National Park. ' +
                     'Discover the Maturango Museum, China Lake, and stunning desert landscapes. ' +
@@ -131,7 +132,7 @@ class BookingService {
                 return { success: false, message: 'Something went wrong. Please email us directly.' };
             }
         }
-        catch (_a) {
+        catch {
             return { success: false, message: 'Network error. Please email info@excellentvisionrealestate.com.' };
         }
     }
@@ -230,6 +231,13 @@ class ModalComponent {
           <a href="${listing.furnishedFinderUrl}" target="_blank" class="btn-ff">
             Also view on Furnished Finder ↗
           </a>
+          ${listing.id === 'ridgecrest' ? `
+          <div class="video-tour-section">
+            <h3 class="video-tour-title">🎬 Video Tour</h3>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/hD3P3xbtRxw" title="624 Randall St Video Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>` : ''}
         </div>
 
         <!-- Booking Form -->
@@ -240,8 +248,16 @@ class ModalComponent {
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="email" name="email" placeholder="Email Address" required />
             <input type="tel" name="phone" placeholder="Phone Number" />
-            <label class="field-label">Desired Move-In Date</label>
-            <input type="date" name="moveInDate" required />
+            <div class="date-row">
+              <div class="date-field">
+                <label class="field-label">Desired Move-In Date</label>
+                <input type="date" name="moveInDate" required />
+              </div>
+              <div class="date-field">
+                <label class="field-label">Desired Move-Out Date</label>
+                <input type="date" name="moveOutDate" />
+              </div>
+            </div>
             <textarea name="message" placeholder="Questions or anything we should know…" rows="4"></textarea>
             <button type="submit" class="btn-submit">
               <span class="btn-text">Send Booking Request</span>
@@ -310,10 +326,9 @@ class CardComponent {
     `;
     }
     slide(id, dir) {
-        var _a;
         const slides = document.getElementById(`slides-${id}`);
         const count = slides.querySelectorAll('img').length;
-        const current = (((_a = this.slidePositions.get(id)) !== null && _a !== void 0 ? _a : 0) + dir + count) % count;
+        const current = ((this.slidePositions.get(id) ?? 0) + dir + count) % count;
         this.slidePositions.set(id, current);
         slides.style.transform = `translateX(-${current * 100}%)`;
         this.updateDots(id, current);
@@ -344,6 +359,7 @@ class BookingServiceExtended extends BookingService {
             phone: form.elements.namedItem('phone').value,
             listingId,
             moveInDate: form.elements.namedItem('moveInDate').value,
+            moveOutDate: form.elements.namedItem('moveOutDate').value,
             message: form.elements.namedItem('message').value,
         };
         const result = await this.submit(data);
